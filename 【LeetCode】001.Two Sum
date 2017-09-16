@@ -1,0 +1,50 @@
+### Description：
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+给定一个整数数组，返回两个数的索引，使它们相加为一个特定的目标。
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+可以假设每个输入都有一个解决方案，但是同一个元素不能使用两次。
+
+Example:
+```
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+```
+
+我的解决方法：
+```
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] res = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (target-nums[i]==nums[j]) {
+                    res[0] = i;
+                    res[1] = j;
+                    break;
+                }
+            }
+        }
+        return res;
+    }
+}
+```
+DS方法：
+```
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        HashMap<Integer,Integer> hash = new HashMap<Integer,Integer>();
+        for(int i = 0; i < numbers.length; i++){
+            Integer diff = (Integer)(target - numbers[i]);
+            if(hash.containsKey(diff)){
+                int toReturn[] = {hash.get(diff)+1, i+1};
+                return toReturn;
+            }
+            hash.put(numbers[i], i);
+        }
+        return null;
+    }
+}
+```
