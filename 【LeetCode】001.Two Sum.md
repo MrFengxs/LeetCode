@@ -1,7 +1,5 @@
 ﻿# 【LeetCode】001.Two Sum
 
-标签（空格分隔）： LeetCode
-
 ---
 
 ### Description：
