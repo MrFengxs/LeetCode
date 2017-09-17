@@ -17,7 +17,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
-暴力方法，时间复杂度O\left ({n}^{2}  \right ),可能会超时：
+暴力方法，时间复杂度<img src="https://latex.codecogs.com/gif.latex?O\left&space;({n}^{2}&space;\right&space;)" title="O\left ({n}^{2} \right )" />,可能会超时：
 （直接在整个数组中进行查找是否包含）
 ```
 public class Solution {
